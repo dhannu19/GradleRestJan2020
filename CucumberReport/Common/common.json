@@ -1,0 +1,88 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "line": 32,
+        "name": "Title of your scenario outline",
+        "description": "",
+        "id": "title-of-your-feature;title-of-your-scenario-outline;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3478098600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I want to write a step with name1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.i_want_to_write_a_step_with_name(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1270526000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I check for the 5 in step",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 16
+                }
+              ],
+              "location": "steps.i_check_for_the_in_step(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7458800,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I verify the success in step",
+            "match": {
+              "location": "steps.i_verify_the_success_in_step()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag2"
+          }
+        ]
+      }
+    ],
+    "name": "Title of your feature",
+    "description": "  I want to use this template for my feature file",
+    "id": "title-of-your-feature",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/TC1.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
