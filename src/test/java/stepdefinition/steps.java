@@ -18,10 +18,8 @@ public class steps {
 
 	
 	
-	@Given("^I want to write a step with name(\\d+)$")
-	
-	public void i_want_to_write_a_step_with_name(int arg1) {
-		
+	@Given("^I want to write a step with name$")
+	public void i_want_to_write_a_step_with_name () {	
 	 //GETAPI
 		System.out.println("GET API Code");
 		Response response= given()
@@ -76,11 +74,29 @@ public class steps {
 		System.out.println(Arrays.asList(map));
 		System.out.println(responsepost);
 		
-		
-		
-		
+		}
+	
+	
+	@Given("^I GET Call is called with value in it$")
+	public void i_GET_Call_is_call_with_value_in_it() {
+	   
+		 //GETAPI
+		System.out.println("GET API Code");
+		Response response= given()
+		.when()
+		.get("http://restapi.demoqa.com/utilities/weather/city/Hyderabad")
+		.then()
+		.statusCode(200)
+		.statusLine("HTTP/1.1 200 OK")
+		.assertThat().body("City", equalTo("Hyderabad"))
+		.header("Content-Type","application/json")
+		  .log().all()
+		   .extract().response();
+		System.out.println(response);
+		System.out.println("Test Passed Given");
+		}
 
-	}
+	
 
 	@Then("^I verify the success in step$")
 	public void i_verify_the_success_in_step() {
